@@ -1,0 +1,88 @@
+
+
+.container1{
+  height: 100px;
+}
+
+
+img{
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 150px;
+    height: 40px;
+}
+
+
+.navbar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;     /* Add this for vertical alignment */
+  position: fixed;         
+  top: 0;                  
+  left: 0;
+  width: 100%;             
+  z-index: 999;            
+  padding: 0 10px;         /* Replace margin-right in buttons */
+}
+
+/* navbar  */
+
+
+.button-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 60px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+   overflow: hidden;  
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-top: 12px solid transparent;
+}
+.linkedin::after{
+    border-right: 12px solid rgba(0, 0, 0, 0.9);
+}
+
+.menu::after {
+  border-left: 12px solid rgba(0, 0, 0, 0.9);
+  left: 0;
+  right: auto;
+}
+.icon {
+  font-size: 25px;
+}
+span{
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.linkedin {
+  width: 45px;
+  justify-content: center;
+}
+.menu-text{
+    font-size: 15px;
+}

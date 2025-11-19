@@ -1,0 +1,96 @@
+
+.About-heading{
+    
+    color: white;
+    font-size: 57px;
+    padding-bottom: 20px;
+}
+
+.About-heading h2{
+    margin-left: 117px;
+    line-height: 90px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding-top: 90px;
+     background: linear-gradient(90deg, #013cee, #00BFFF, #8fd2f3, #a7f25d);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    
+    animation: gradientShift 6s ease-in-out infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+.About-Text{
+    width: 550px;
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 850px;
+    margin-top: 30px;
+    color: white;
+}
+.About-Text p{
+    line-height: 27px;
+}
+.learn-button {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.learn-button:hover {
+  transform: scale(1.05);
+}
+
+.about-btn {
+    margin-top: 35px;
+}
+ 
+
+
+
+
+.learnmore-btn .btn-bg {
+  transition: fill 0.3s ease;
+}
+
+.learnmore-btn:hover .btn-bg {
+  fill: url(#animatedGradient); /* Gradient appears on hover */
+}
+
+/* Text color */
+.learnmore-btn .btn-text {
+  fill: black;
+  transition: fill 0.3s ease;
+}
+
+.learnmore-btn:hover .btn-text {
+  fill: white;
+}
+
+/* Square & Arrow animation */
+.learnmore-btn .square {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.learnmore-btn .arrow {
+  opacity: 0;
+  transform: translateX(-5px);
+  stroke: black;
+  transition: opacity 0.35s ease, transform 0.35s ease, stroke 0.3s ease;
+}
+
+.learnmore-btn:hover .square {
+  opacity: 0;
+  transform: translateX(5px);
+}
+
+.learnmore-btn:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+  stroke: white;
+}

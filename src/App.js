@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Navbar from "./components/Navbar/Navbar.jsx";
+import HeroSection from "./components/HeroSection/HeroSection.jsx";
+import Specialism from "./components/Specialism/Specialism.jsx";
+import AboutUs from "./components/About-us/AboutUs.jsx";
+import GlobalReach from "./components/Global-reach/GlobalReach.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App">
+        <Navbar />
+        <HeroSection />
+      </div>
+      <div className="Our-Specialisms">
+        <Specialism />
+      </div>
+      <div className="About-us">
+          <AboutUs />
+      </div>
+      <div className="our-global-reach">
+          <GlobalReach />
+      </div>
     </div>
   );
 }
