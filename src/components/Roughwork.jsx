@@ -1,674 +1,509 @@
 import React from 'react'
 
-export default function Roughwork() {
+export default function GlobalReach() {
+  useEffect(() => {
+  const handleScroll = () => {
+    const section = document.querySelector(".our-global-reach");
+    const svgsWrapper = document.querySelector(".images-animation");
+
+    const rect = section.getBoundingClientRect();
+
+    // section screen par visible ho jaye to animation trigger
+    if (rect.top < window.innerHeight * 0.6) {
+      svgsWrapper.classList.add("scroll-animate");
+    } else {
+      svgsWrapper.classList.remove("scroll-animate");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
   return (
-    <>
-    <svg width="700" height="750" className="svg1">
-            <defs>
-              <clipPath id="clip1">
-                <path d="M 30 30 H 500 L 650 200 V 720 H 30 Z" />
-              </clipPath>
-        
-              <linearGradient id="blackShade1" x1="0" y1="1" x2="0" y2="0">
-                <stop offset="0%" stopColor="black" stopOpacity="0.45" />
-                <stop offset="100%" stopColor="black" stopOpacity="0" />
-              </linearGradient>
-        
-               <filter id="aquaGlow" x="-50%" y="-50%" width="200%" height="200%">
-                <feDropShadow dx="-5" dy="-5" stdDeviation="10" floodColor="aqua" />
-              </filter>
-              
-            </defs>
-        
-            
-            <g className="image-wrapper">
-              <image 
-                href={image2} 
-                x="0" 
-                y="0" 
-                width="700" 
-                height="750" 
-                clipPath="url(#clip1)" 
-                preserveAspectRatio="xMidYMid slice" 
-              />
-            </g>
-        
-           
-            <rect 
-              x="0" 
-              y="620" 
-              width="700" 
-              height="130" 
-              fill="url(#blackShade1)" 
-              clipPath="url(#clip1)" 
-            />
-        
-            
-            <g className="bottom-wrapper">
-             
-              <image 
-                href={image4} 
-                x="85" 
-                y="615" 
-                width="330" 
-                height="90" 
-                className="bottom-img" 
-                preserveAspectRatio="xMidYMid meet" 
-              />
-        
-             
-              <foreignObject 
-                x="85" 
-                y="710" 
-                width="330" 
-                height="100" 
-                className="para-box" 
-                style={{ overflow: "visible" }}
-              >
-                <div xmlns="http://www.w3.org/1999/xhtml" className="text-lines">
-                  <p>
-                    Utilizing our expertise to provide recruiment solutions to <br />
-                    some of the world's most cutting-edge companies in <br />
-                    MedTech and Life Science.
-                  </p>
-                </div>
-              </foreignObject>
-                 <foreignObject
-            x="85"
-            y="825" 
-            width="180"
-            height="60"
-            className="button-box"
-            style={{ overflow: "visible" }}
-          >
-            <div xmlns="http://www.w3.org/1999/xhtml">
-        
-              <svg
-                width="150"
-                height="55"
-                viewBox="0 0 180 55"
-                style={{ cursor: "pointer" }}
-                xmlns="http://www.w3.org/2000/svg"
-                className="learn-button"
-              >
-                <defs>
-                  <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#00FFAA">
-                      <animate attributeName="stop-color" values="#00FFAA;#0077FF;#00FFAA" dur="3s" repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="100%" stopColor="#0077FF">
-                      <animate attributeName="stop-color" values="#0077FF;#00FFAA;#0077FF" dur="3s" repeatCount="indefinite" />
-                    </stop>
-                  </linearGradient>
-                </defs>
-        
-                
-                <path
-                  d="
-                    M0 10
-                    L0 35
-                    L20 55
-                    H180
-                    V0
-                    H0
-                    Z
-                  "
-                  fill="url(#animatedGradient)"
-                />
-        
-               
-                <text
-                  x="28"
-                  y="31"
-                  fontSize="14"
-                  fill="white"
-                  fontWeight="bold"
-                  fontFamily="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-                >
-                  LEARN MORE
-                </text>
-        
-                
-                <path
-                  className="arrow"
-                  d="M150 27 L165 27 L160 22 M165 27 L160 32"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  
-                />
-              </svg>
-        
-            </div>
-          </foreignObject>
-            </g>
-        
-            {/* Outline stroke */}
-            <path className='svg1Border'
-              d="M 30 30 H 500 L 650 200 V 720 H 30 Z" 
-              fill="none" 
-              stroke="#06402B" 
-              strokeWidth="2" 
-            />
-          </svg>
-
-
-<div className="svgContainer">
-
-  {/* ================= SVG 1 ================= */}
- <svg width="700" height="750" className="svg1">
-            <defs>
-              <clipPath id="clip1">
-                <path d="M 30 30 H 500 L 650 200 V 720 H 30 Z" />
-              </clipPath>
-        
-              <linearGradient id="blackShade1" x1="0" y1="1" x2="0" y2="0">
-                <stop offset="0%" stopColor="black" stopOpacity="0.45" />
-                <stop offset="100%" stopColor="black" stopOpacity="0" />
-              </linearGradient>
-        
-               <filter id="aquaGlow" x="-50%" y="-50%" width="200%" height="200%">
-                <feDropShadow dx="-5" dy="-5" stdDeviation="10" floodColor="aqua" />
-              </filter>
-              
-            </defs>
-        
-            
-            <g className="image-wrapper">
-              <image 
-                href={image2} 
-                x="0" 
-                y="0" 
-                width="700" 
-                height="750" 
-                clipPath="url(#clip1)" 
-                preserveAspectRatio="xMidYMid slice" 
-              />
-            </g>
-        
-           
-            <rect 
-              x="0" 
-              y="620" 
-              width="700" 
-              height="130" 
-              fill="url(#blackShade1)" 
-              clipPath="url(#clip1)" 
-            />
-        
-            
-            <g className="bottom-wrapper">
-             
-              <image 
-                href={image4} 
-                x="85" 
-                y="615" 
-                width="330" 
-                height="90" 
-                className="bottom-img" 
-                preserveAspectRatio="xMidYMid meet" 
-              />
-        
-             
-              <foreignObject 
-                x="85" 
-                y="710" 
-                width="330" 
-                height="70" 
-                className="para-box" 
-                style={{ overflow: "visible" }}
-              >
-                <div xmlns="http://www.w3.org/1999/xhtml" className="text-lines">
-                  <p>
-                    Utilizing our expertise to provide recruiment solutions to <br />
-                    some of the world's most cutting-edge companies in <br />
-                    MedTech and Life Science.
-                  </p>
-                </div>
-              </foreignObject>
-                 <foreignObject
-            x="85"
-            y="780" 
-            width="180"
-            height="90"
-            className="button-box"
-            style={{ overflow: "visible" }}
-          >
-            <div xmlns="http://www.w3.org/1999/xhtml">
-        
-              <svg
-                width="150"
-                height="55"
-                viewBox="0 0 210 55"
-                style={{ cursor: "pointer" }}
-                xmlns="http://www.w3.org/2000/svg"
-                className="learn-button"
-              >
-                <defs>
-                  <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#00FFAA">
-                      <animate attributeName="stop-color" values="#00FFAA;#0077FF;#00FFAA" dur="3s" repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="100%" stopColor="#0077FF">
-                      <animate attributeName="stop-color" values="#0077FF;#00FFAA;#0077FF" dur="3s" repeatCount="indefinite" />
-                    </stop>
-                  </linearGradient>
-                </defs>
-        
-                
-                <path
-                  d="
-                    M0 10
-                    L0 35
-                    L20 55
-                    H180
-                    V0
-                    H0
-                    Z
-                  "
-                  fill="url(#animatedGradient)"
-                />
-        
-               
-                <text
-                  x="28"
-                  y="31"
-                  fontSize="14"
-                  fill="white"
-                  fontWeight="bold"
-                  fontFamily="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-                >
-                  LEARN MORE
-                </text>
-        
-                
-                <path
-                  className="arrow"
-                  d="M150 27 L165 27 L160 22 M165 27 L160 32"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  
-                />
-              </svg>
-        
-            </div>
-          </foreignObject>
-            </g>
-        
-            {/* Outline stroke */}
-            <path className='svg1Border'
-              d="M 30 30 H 500 L 650 200 V 720 H 30 Z" 
-              fill="none" 
-              stroke="#06402B" 
-              strokeWidth="2" 
-            />
-          </svg>
-
-
-
-
-
-
-  {/* ================= SVG 2 (mirror) ================= */}
-  <svg width="700" height="750" className="svg2">
-    <defs>
-      <clipPath id="clip2">
-        <path d="M 650 30 H 150 L 30 200 V 720 H 650 Z" />
-      </clipPath>
-
-      <linearGradient id="blackShade2" x1="0" y1="1" x2="0" y2="0">
-        <stop offset="0%" stopColor="black" stopOpacity="0.45" />
-        <stop offset="100%" stopColor="black" stopOpacity="0" />
-      </linearGradient>
-
-       <filter id="aquaGlow" x="-50%" y="-50%" width="200%" height="200%">
-        <feDropShadow dx="-5" dy="-5" stdDeviation="10" floodColor="#4eff00" />
-      </filter>
-
-      <linearGradient id="animatedGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stopColor="#00FFAA">
-        <animate attributeName="stop-color" values="#00FFAA;#0077FF;#00FFAA" dur="3s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stopColor="#0077FF">
-        <animate attributeName="stop-color" values="#0077FF;#00FFAA;#0077FF" dur="3s" repeatCount="indefinite" />
-      </stop>
-    </linearGradient>
-    </defs>
-
-    {/* MAIN IMAGE */}
-    <g className="image-wrapper2">
-      <image 
-        href={image3} 
-        x="0" 
-        y="0" 
-        width="700" 
-        height="750" 
-        clipPath="url(#clip2)" 
-        preserveAspectRatio="xMidYMid slice" 
-      />
-    </g>
-
-    {/* BLACK SHADE */}
-    <rect 
-      x="0" 
-      y="620" 
-      width="700" 
-      height="130" 
-      fill="url(#blackShade2)" 
-      clipPath="url(#clip2)" 
-    />
-
-    {/* BOTTOM IMAGE + PARAGRAPH */}
-    <g  className="bottom-wrapper">
-      <image 
-        href={image5} 
-        x="85" 
-        y="615" 
-        width="330" 
-        height="90" 
-        className="bottom-img" 
-        preserveAspectRatio="xMidYMid meet" 
-      />
-
-      <foreignObject 
-        x="85" 
-        y="710" 
-        width="330" 
-        height="100" 
-        className="para-box" 
-        style={{ overflow: "visible" }}
-      >
-        <div xmlns="http://www.w3.org/1999/xhtml" className="text-lines">
-          <p>
-            Optimizing our global reach to build world leading teams <br />
-            and provide solutions to the global shortage of <br />
-            infrastructure and engineering talent.
-          </p>
+   <div className='GlobalReach'>
+        <div className='GlobalReach-heading'>
+            <h2>
+            <span className="big">Our Global</span> <br />
+            <span className="small">Reach</span>
+            </h2>
         </div>
-      </foreignObject>
-      <g className="buttonBox" transform="translate(85, 775)">
-      <svg
-        width="150"
-        height="55"
-        viewBox="0 0 210 55"
-        // style={{ overflow: "visible" }}
-        // xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-        <linearGradient id="animatedGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#00FFAA">
-            <animate attributeName="stop-color" values="#00FFAA;#0077FF;#00FFAA" dur="3s" repeatCount="indefinite" />
-          </stop>
-          <stop offset="100%" stopColor="#0077FF">
-            <animate attributeName="stop-color" values="#0077FF;#00FFAA;#0077FF" dur="3s" repeatCount="indefinite" />
-          </stop>
-        </linearGradient>
-      </defs>
-        {/* Button Shape */}
-        <path
-          d="M0 10 L0 35 L20 55 H180 V0 H0 Z"
-          fill="url(#animatedGradient2)"
-        />
+        <div className='images-animation'>
+            
+           <svg width="370" height="450" className="NewYork ">
+                <defs>
+                    <clipPath id="clipCustom">
+                    <path 
+                        d="
+                        M 15 18
+                        H 265
+                        L 359 118
+                        V 430
+                        H 15
+                        Z
+                        "
+                    />
+                    </clipPath>
+                </defs>
 
-        {/* Text */}
-        <text
-          x="28"
-          y="31"
-          fontSize="14"
-          fill="white"
-          fontWeight="bold"
-          fontFamily="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-        >
-          LEARN MORE
-        </text>
-
-        {/* Arrow */}
-        <path
-          d="M150 27 L165 27 L160 22 M165 27 L160 32"
-          stroke="white"
-          strokeWidth="2.5"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </g>
-    </g>
-
-    <path className='svg2Border'
-      d="M 650 30 H 150 L 30 200 V 720 H 650 Z" 
-      fill="none" 
-      stroke="#06402B" 
-      strokeWidth="2" 
+  {/* CONTENT INSIDE SHAPE */}
+  <g clipPath="url(#clipCustom)">
+    <image 
+      href={NewYork}
+      x="0"
+      y="0"
+      width="370"
+      height="450"
+      preserveAspectRatio="xMidYMid slice"
     />
-    </svg>
+    {/* TOP LEFT TEXT "01" */}
+    <text
+      x="40"   /* 15px path start + 10px inset */
+      y="75"   /* 18px path start + ~10px vertical padding */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      01
+    </text>
 
-  </div>
+    {/* BOTTOM LEFT TEXT "NewYork" */}
+    <text
+      x="40"
+      y="400"  /* 430px path bottom - ~5px inset */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      NewYork
+    </text>
+  </g>
 
-  <svg width="700" height="750" className="svg2">
-  
-    <defs>
-      <clipPath id="clip2">
-        <path d="M 650 30 H 150 L 30 200 V 720 H 650 Z" />
-      </clipPath>
-  
-      <linearGradient id="blackShade2" x1="0" y1="1" x2="0" y2="0">
-        <stop offset="0%" stopColor="black" stopOpacity="0.45" />
-        <stop offset="100%" stopColor="black" stopOpacity="0" />
-      </linearGradient>
-  
-      {/* <linearGradient id="animatedGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#00FFAA">
-          <animate attributeName="stop-color" values="#00FFAA;#0077FF;#00FFAA" dur="3s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="100%" stopColor="#0077FF">
-          <animate attributeName="stop-color" values="#0077FF;#00FFAA;#0077FF" dur="3s" repeatCount="indefinite" />
-        </stop>
-      </linearGradient> */}
-      <filter id="aquaGlow" x="-50%" y="-50%" width="200%" height="200%">
-        <feDropShadow dx="-5" dy="-5" stdDeviation="10" floodColor="aqua" />
-      </filter>
-    </defs>
-  
-    <g clipPath="url(#clip2)">
-  
-      <g className="image-wrapper2">
-        <image 
-          href={image3} 
-          x="0" 
-          y="0" 
-          width="700" 
-          height="750" 
-          preserveAspectRatio="xMidYMid slice" 
-        />
-      </g>
-  
-      <rect x="0" y="620" width="700" height="130" fill="url(#blackShade2)" />
-  
-      <g className="bottom-wrapper" style={{ overflow: 'visible' }}>
-  
-        <image 
-          href={image5} 
-          x="85" 
-          y="615" 
-          width="330" 
-          height="90"
-          className="bottom-img"
-        />
-        
-  
-        <foreignObject x="85" y="710" width="480" height="130" className="para-box">
-          <div xmlns="http://www.w3.org/1999/xhtml" className="text-lines">
-            <p>
-              Optimizing our global reach to build world leading teams <br />
-              and provide solutions to the global shortage of <br />
-              infrastructure and engineering talent.
-            </p>
-          </div>
-        </foreignObject>
-  
-        <foreignObject x="85" y="840" width="180" height="90">
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <svg width="150" height="55" viewBox="0 0 210 55" className="learn-button">
-              {/* <path d="M0 10 L0 35 L20 55 H180 V0 H0 Z" fill="url(#animatedGradient2)" />
-              <text x="28" y="31" fontSize="14" fill="white" fontWeight="bold" fontFamily="Segoe UI">LEARN MORE</text>
-              <path d="M150 27 L165 27 L160 22 M165 27 L160 32" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" /> */}
-             <defs>
-                <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#00FFAA">
-                    <animate attributeName="stop-color" values="#00FFAA;#0077FF;#00FFAA" dur="3s" repeatCount="indefinite" />
-                  </stop>
-                  <stop offset="100%" stopColor="#0077FF">
-                    <animate attributeName="stop-color" values="#0077FF;#00FFAA;#0077FF" dur="3s" repeatCount="indefinite" />
-                  </stop>
-                </linearGradient>
-              </defs>
-            <path d="M0 10 L0 35 L20 55 H180 V0 H0 Z" fill="url(#animatedGradient2)" />
-            <text x="28" y="31" fontSize="14" fill="white" fontWeight="bold" fontFamily="Segoe UI">LEARN MORE</text>
-            <path d="M150 27 L165 27 L160 22 M165 27 L160 32" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+  {/* BORDER */}
+  <path
+    d="
+      M 15 18
+      H 265
+      L 359 118
+      V 430
+      H 15
+      Z
+    "
+    fill="none"
+    stroke="none"
+    strokeWidth="2"
+  />
             </svg>
-          </div>
-        </foreignObject>
-  
-      </g>
-  
-    </g>
-  
-    <path className='svg2Border' d="M 650 30 H 150 L 30 200 V 720 H 650 Z" fill="none" stroke="#06402B" strokeWidth="2" />
-  </svg>
 
-  <svg width="700" height="750" className="svg2">
-    <defs>
-      {/* Clip Path */}
-      <clipPath id="clip2">
-        <path d="M 650 30 H 150 L 30 200 V 720 H 650 Z" />
-      </clipPath>
-  
-      {/* Black Shade */}
-      <linearGradient id="blackShade2" x1="0" y1="1" x2="0" y2="0">
-        <stop offset="0%" stopColor="black" stopOpacity="0.45" />
-        <stop offset="100%" stopColor="black" stopOpacity="0" />
-      </linearGradient>
+            <svg width="370" height="450" className="Fort-Lauderdale ">
+                <defs>
+                    <clipPath id="clipCustom">
+                    <path 
+                        d="
+                        M 15 18
+                        H 265
+                        L 359 118
+                        V 430
+                        H 15
+                        Z
+                        "
+                    />
+                    </clipPath>
+                </defs>
 
-      <filter id="aquaGlow" x="-50%" y="-50%" width="200%" height="200%">
-        <feDropShadow dx="-5" dy="-5" stdDeviation="10" floodColor="aqua" />
-      </filter>
-    </defs>
-  
-      {/* Animated Gradient for Button */}
-      {/* <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#00FFAA">
-          <animate attributeName="stop-color" values="#00FFAA;#0077FF;#00FFAA" dur="3s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="100%" stopColor="#0077FF">
-          <animate attributeName="stop-color" values="#0077FF;#00FFAA;#0077FF" dur="3s" repeatCount="indefinite" />
-        </stop>
-      </linearGradient>
-   */}
-      {/* Optional Glow */}
-      
-  
-    {/* Clipped Content */}
-    <g clipPath="url(#clip2)">
-      {/* Main Image */}
-      <g className="image-wrapper2">
-        <image
-          href={image3}
-          x="0"
-          y="0"
-          width="700"
-          height="750"
-          preserveAspectRatio="xMidYMid slice"
-        />
-      </g>
-  
-      {/* Black Shade */}
-      <rect x="0" y="620" width="700" height="130" fill="url(#blackShade2)" />
-  
-      {/* Bottom Wrapper */}
-      <g className="bottom-wrapper" >
-        {/* Bottom Image */}
-        <image
-          href={image5}
-          x="85"
-          y="615"
-          width="330"
-          height="90"
-          className="bottom-img"
-        />
-  
-        {/* Paragraph */}
-        <foreignObject x="85" y="710" width="480" height="130" className="para-box">
-          <div xmlns="http://www.w3.org/1999/xhtml" className="text-lines">
-            <p>
-              Optimizing our global reach to build world leading teams <br />
-              and provide solutions to the global shortage of <br />
-              infrastructure and engineering talent.
-            </p>
-          </div>
-        </foreignObject>
-  
-        {/* Button */}
-        <foreignObject x="85" y="840" width="180" height="90">
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <svg width="150" height="55" viewBox="0 0 210 55" className="learn-button">
-              <defs>
-                <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#00FFAA">
-                    <animate attributeName="stop-color" values="#00FFAA;#0077FF;#00FFAA" dur="3s" repeatCount="indefinite" />
-                  </stop>
-                  <stop offset="100%" stopColor="#0077FF">
-                    <animate attributeName="stop-color" values="#0077FF;#00FFAA;#0077FF" dur="3s" repeatCount="indefinite" />
-                  </stop>
-                </linearGradient>
-              </defs>
-              
-              <path
-                d="M0 10 L0 35 L20 55 H180 V0 H0 Z"
-                fill="url(#animatedGradient)"
-              />
-              <text
-                x="28"
-                y="31"
-                fontSize="14"
-                fill="white"
-                fontWeight="bold"
-                fontFamily="Segoe UI"
-              >
-                LEARN MORE
-              </text>
-              <path
-                d="M150 27 L165 27 L160 22 M165 27 L160 32"
-                stroke="white"
-                strokeWidth="2.5"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-        </foreignObject>
-      </g>
-    </g>
-  
-    {/* Border */}
-    <path
-      className="svg2Border"
-      d="M 650 30 H 150 L 30 200 V 720 H 650 Z"
-      fill="none"
-      stroke="#06402B"
-      strokeWidth="2"
+  {/* CONTENT INSIDE SHAPE */}
+  <g clipPath="url(#clipCustom)">
+    <image 
+      href={FortLauderale}
+      x="0"
+      y="0"
+      width="370"
+      height="450"
+      preserveAspectRatio="xMidYMid slice"
     />
-  </svg>
+    {/* TOP LEFT TEXT "01" */}
+    <text
+      x="40"   /* 15px path start + 10px inset */
+      y="75"   /* 18px path start + ~10px vertical padding */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      02
+    </text>
 
+    {/* BOTTOM LEFT TEXT "NewYork" */}
+    <text
+      x="40"
+      y="400"  /* 430px path bottom - ~5px inset */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      Fort Lauderale
+    </text>
+  </g>
 
+  {/* BORDER */}
+  <path
+    d="
+      M 15 18
+      H 265
+      L 359 118
+      V 430
+      H 15
+      Z
+    "
+    fill="none"
+    stroke="none"
+    strokeWidth="2"
+  />
+            </svg>
 
+            <svg width="370" height="450" className="Austin ">
+                <defs>
+                    <clipPath id="clipCustom">
+                    <path 
+                        d="
+                        M 15 18
+                        H 265
+                        L 359 118
+                        V 430
+                        H 15
+                        Z
+                        "
+                    />
+                    </clipPath>
+                </defs>
 
-  </>
+  {/* CONTENT INSIDE SHAPE */}
+  <g clipPath="url(#clipCustom)">
+    <image 
+      href={Austin}
+      x="0"
+      y="0"
+      width="370"
+      height="450"
+      preserveAspectRatio="xMidYMid slice"
+    />
+    {/* TOP LEFT TEXT "01" */}
+    <text
+      x="40"   /* 15px path start + 10px inset */
+      y="75"   /* 18px path start + ~10px vertical padding */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      03
+    </text>
+
+    {/* BOTTOM LEFT TEXT "NewYork" */}
+    <text
+      x="40"
+      y="400"  /* 430px path bottom - ~5px inset */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      Austin
+    </text>
+  </g>
+
+  {/* BORDER */}
+  <path
+    d="
+      M 15 18
+      H 265
+      L 359 118
+      V 430
+      H 15
+      Z
+    "
+    fill="none"
+    stroke="none"
+    strokeWidth="2"
+  />
+            </svg>
+
+            <svg width="370" height="450" className="sandiego ">
+                <defs>
+                    <clipPath id="clipCustom">
+                    <path 
+                        d="
+                        M 15 18
+                        H 265
+                        L 359 118
+                        V 430
+                        H 15
+                        Z
+                        "
+                    />
+                    </clipPath>
+                </defs>
+
+  {/* CONTENT INSIDE SHAPE */}
+  <g clipPath="url(#clipCustom)">
+    <image 
+      href={sandiego}
+      x="0"
+      y="0"
+      width="370"
+      height="450"
+      preserveAspectRatio="xMidYMid slice"
+    />
+    {/* TOP LEFT TEXT "01" */}
+    <text
+      x="40"   /* 15px path start + 10px inset */
+      y="75"   /* 18px path start + ~10px vertical padding */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      04
+    </text>
+
+    {/* BOTTOM LEFT TEXT "NewYork" */}
+    <text
+      x="40"
+      y="400"  /* 430px path bottom - ~5px inset */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      San Diego
+    </text>
+  </g>
+
+  {/* BORDER */}
+  <path
+    d="
+      M 15 18
+      H 265
+      L 359 118
+      V 430
+      H 15
+      Z
+    "
+    fill="none"
+    stroke="none"
+    strokeWidth="2"
+  />
+            </svg>  
+
+            <svg width="370" height="450" className="london ">
+                <defs>
+                    <clipPath id="clipCustom">
+                    <path 
+                        d="
+                        M 15 18
+                        H 265
+                        L 359 118
+                        V 430
+                        H 15
+                        Z
+                        "
+                    />
+                    </clipPath>
+                </defs>
+
+  {/* CONTENT INSIDE SHAPE */}
+  <g clipPath="url(#clipCustom)">
+    <image 
+      href={london}
+      x="0"
+      y="0"
+      width="370"
+      height="450"
+      preserveAspectRatio="xMidYMid slice"
+    />
+    {/* TOP LEFT TEXT "01" */}
+    <text
+      x="40"   /* 15px path start + 10px inset */
+      y="75"   /* 18px path start + ~10px vertical padding */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      05
+    </text>
+
+    {/* BOTTOM LEFT TEXT "NewYork" */}
+    <text
+      x="40"
+      y="400"  /* 430px path bottom - ~5px inset */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      London
+    </text>
+  </g>
+
+  {/* BORDER */}
+  <path
+    d="
+      M 15 18
+      H 265
+      L 359 118
+      V 430
+      H 15
+      Z
+    "
+    fill="none"
+    stroke="none"
+    strokeWidth="2"
+  />
+            </svg>
+
+            <svg width="370" height="450" className="leeds ">
+                <defs>
+                    <clipPath id="clipCustom">
+                    <path 
+                        d="
+                        M 15 18
+                        H 265
+                        L 359 118
+                        V 430
+                        H 15
+                        Z
+                        "
+                    />
+                    </clipPath>
+                </defs>
+
+  {/* CONTENT INSIDE SHAPE */}
+  <g clipPath="url(#clipCustom)">
+    <image 
+      href={leeds}
+      x="0"
+      y="0"
+      width="370"
+      height="450"
+      preserveAspectRatio="xMidYMid slice"
+    />
+    {/* TOP LEFT TEXT "01" */}
+    <text
+      x="40"   /* 15px path start + 10px inset */
+      y="75"   /* 18px path start + ~10px vertical padding */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      06
+    </text>
+
+    {/* BOTTOM LEFT TEXT "NewYork" */}
+    <text
+      x="40"
+      y="400"  /* 430px path bottom - ~5px inset */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      Leeds
+    </text>
+  </g>
+
+  {/* BORDER */}
+  <path
+    d="
+      M 15 18
+      H 265
+      L 359 118
+      V 430
+      H 15
+      Z
+    "
+    fill="none"
+    stroke="none"
+    strokeWidth="2"
+  />
+            </svg>
+
+            <svg width="370" height="450" className="nottingham ">
+                <defs>
+                    <clipPath id="clipCustom">
+                    <path 
+                        d="
+                        M 15 18
+                        H 265
+                        L 359 118
+                        V 430
+                        H 15
+                        Z
+                        "
+                    />
+                    </clipPath>
+                </defs>
+
+  {/* CONTENT INSIDE SHAPE */}
+  <g clipPath="url(#clipCustom)">
+    <image 
+      href={nottingham}
+      x="0"
+      y="0"
+      width="370"
+      height="450"
+      preserveAspectRatio="xMidYMid slice"
+    />
+    {/* TOP LEFT TEXT "01" */}
+    <text
+      x="40"   /* 15px path start + 10px inset */
+      y="75"   /* 18px path start + ~10px vertical padding */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      07
+    </text>
+
+    {/* BOTTOM LEFT TEXT "NewYork" */}
+    <text
+      x="40"
+      y="400"  /* 430px path bottom - ~5px inset */
+      fontSize="35"
+      fontWeight="bold"
+      fill="white"
+      fontFamily="Segoe UI"
+    >
+      Nottingham
+    </text>
+  </g>
+
+  {/* BORDER */}
+  <path
+    d="
+      M 15 18
+      H 265
+      L 359 118
+      V 430
+      H 15
+      Z
+    "
+    fill="none"
+    stroke="none"
+    strokeWidth="2"
+  />
+            </svg>
+
+           
+
+        </div>
+
+    </div>
   )
 }

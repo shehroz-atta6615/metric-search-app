@@ -1,0 +1,37 @@
+.talented-individuals-heading h2 {
+  font-weight: 700;
+  line-height: 1.1;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.talented-individuals-heading .big {
+  font-size: 60px;
+}
+
+.talented-individuals-heading .small {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.talented-individuals-heading {
+  width: 450;
+  padding-top: 200px;       
+  margin-left: 130px;
+}
+.talented-individuals{
+    display: flex;
+}
+.Metric-Search-London .Metric-Search-London-image1{
+    margin-left: 100px;
+}
+.Metric-Search-London-image1{
+    margin-top: 150px;
+}
+.Metric-Search-London{
+    display: flex;
+}
+.man-smiling{
+    
+}

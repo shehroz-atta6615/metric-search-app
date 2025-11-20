@@ -1,113 +1,138 @@
-.svgContainer {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.svg1 { margin-left: 90px; }
-.svg2 { margin-right: 130px; }
-
-.svgContainer svg { cursor: pointer; }
-
-/* Main image hover zoom */
-.image-wrapper image,
-.image-wrapper2 image {
-  transition: all 0.4s ease-in-out;
-}
-
-.image-wrapper:hover image,
-.image-wrapper2:hover image {
-  width: 730px;
-  height: 780px;
-  x: -8px;
-  y: -8px;
-}
-
-/* ===== Bottom group ===== */
-.bottom-wrapper {
-  transform: translateY(0);
-  transition: transform 0.55s cubic-bezier(.2,.9,.7,1);
-  overflow: visible; /* paragraph visible rahe */
-}
-
-/* On hover of the individual svg, move the group up smoothly */
-svg:hover .bottom-wrapper {
-  transform: translateY(-150px); /* image + paragraph move up */
-}
-
-/* Text inside foreignObject */
-.text-lines {
-  margin: 0;
-  opacity: 0;
-  transform: translateY(0);
-  transition: opacity 0.45s ease-in-out, transform 0.45s ease-in-out;
+ .GlobalReach-heading h2 {
+  font-weight: 700;
+  line-height: 1.1;
   color: white;
-  font-size: 14px;
-  line-height: 1.35;
-  font-family: Arial, sans-serif;
-  pointer-events: none;
-  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Show text on hover */
-svg:hover .text-lines {
-  opacity: 1;
-  transform: translateY(-10px);
+
+.GlobalReach-heading .big {
+  font-size: 70px;
 }
 
-/* Ensure foreignObject allows overflow (so text not cut) */
-.para-box {
-  overflow: visible;
-  height: 120px;
+.GlobalReach-heading .small {
+  font-size: 50px;
 }
 
-.text-lines p {
-  width: 400px;
-  font-size: 16px;
+.GlobalReach-heading {
+  
+  margin-top: 100px;       
+  margin-left: 130px;
 }
 
-/* ===== Shade effect for both SVGs ===== */
-.svg1 rect,
-.svg2 rect {
-  transition: all 0.5s ease-in-out; /* smooth transition */
+/* .images-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 20px 0;
+} */
+ .GlobalReach{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+ }
+ .images-animation {
+  
+  position: absolute;
+   inset: 0; 
+   pointer-events: none;
+   overflow: hidden;
+  
+
+  /* display: flex; */
+  /* gap: 40px; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* overflow: hidden; */
 }
 
-/* On hover */
-.svg1:hover rect,
-.svg2:hover rect {
-  y: 495px;      /* shift up by 25px */
-  height: 230px;  /* increase height to cover bottom image */
-}
-.svg1Border {
-  stroke: #06402B;       /* initial color */
-  transition: stroke 0.4s ease-in-out; /* smooth transition */
-}
-.svg1:hover .svg1Border {
-  stroke: aqua;       
-}
-.svg2Border {
-  stroke: #06402B;       /* initial color */
-  transition: stroke 0.4s ease-in-out; /* smooth transition */
-}
-.svg2:hover .svg2Border {
-  stroke: #4eff00;       /* jo color aap chahte ho hover par */
-}
-
-.text-lines,
-.learn-button {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: all 0.5s ease-in-out;
-}
-
-.svg1:hover .text-lines,
-.svg1:hover .learn-button {
-  opacity: 1;
-  transform: translateY(0);
+.images-animation.scroll-animate svg {
+  top: 0px !important;
+  left: -450px !important;
+  transform: translate(0, 0) rotate(-10deg) !important;
+  transition: all 2s ease-in-out;
 }
 
 
 
-.bottom-wrapper {
-    overflow: hidden; /* ensures content stays inside the clipPath */
+
+
+
+
+
+
+
+
+
+
+
+
+.NewYork {
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+  margin: 20px 0;
 }
+.Fort-Lauderdale {
+  position: absolute;
+  top: 60%;   
+  left: 75%;  
+  transform: translate(-50%, -50%) rotate(10deg); 
+  transform-origin: top left;
+  z-index: 2; 
+  transition: transform 0.5s ease;
+}
+.Austin {
+  position: absolute;
+  top: 70%;   
+  left: 100%;  
+  transform: translate(-50%, -50%) rotate(20deg); 
+  transform-origin: top left;
+  z-index: 3; 
+  transition: transform 0.5s ease;
+}
+.sandiego{
+    position: absolute;
+    top: 80%;
+    left: 125%;
+    transform: translate(-50%, -50%) rotate(30deg); 
+  transform-origin: top left;
+  z-index: 4; 
+  transition: transform 0.5s ease;
+}
+.london{
+    position: absolute;
+    top: 90%;
+    left: 150%;
+    transform: translate(-50%, -50%) rotate(40deg); 
+  transform-origin: top left;
+  z-index: 5; 
+  transition: transform 0.5s ease;
+}
+.leeds{
+     position: absolute;
+    top: 100%;
+    left: 175%;
+    transform: translate(-50%, -50%) rotate(50deg); 
+  transform-origin: top left;
+  z-index: 6; 
+  transition: transform 0.5s ease;
+}
+.nottingham{
+    position: absolute;
+    top: 110%;
+    left: 200%;
+    transform: translate(-50%, -50%) rotate(60deg); 
+  transform-origin: top left;
+  z-index: 7; 
+  transition: transform 0.5s ease;
+}
+
+
+
+
+
+

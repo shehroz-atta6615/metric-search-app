@@ -26,8 +26,14 @@
 }
 .our-global-reach {
   height: 100vh;
-  background: red;
-  display: flex;          
-  align-items: flex-start;
-  position: relative;
+  background: black;
+   /* display: flex;          
+  align-items: flex-start; */
+  position: relative; 
+  overflow: hidden; 
+  width: 100%;
+}
+.thrive-talented-individuals{
+  height: 100vh;
+  background: black;
 }

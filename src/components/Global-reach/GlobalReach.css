@@ -5,6 +5,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .GlobalReach-heading .big {
   font-size: 70px;
 }
@@ -26,13 +27,53 @@
   transform: translate(-50%, -50%);
   margin: 20px 0;
 } */
+ .GlobalReach{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+ }
+ .images-animation {
+  
+  position: absolute;
+   inset: 0; 
+   pointer-events: none;
+   overflow: hidden;
+  
+
+  /* display: flex; */
+  /* gap: 40px; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* overflow: hidden; */
+}
+
+.images-animation.scroll-animate svg {
+  top: 0px !important;
+  left: -450px !important;
+  transform: translate(0, 0) rotate(-10deg) !important;
+  transition: all 2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .NewYork {
 position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
-  z-index: 2; 
+  z-index: 1; 
   margin: 20px 0;
 }
 .Fort-Lauderdale {
@@ -41,9 +82,55 @@ position: absolute;
   left: 75%;  
   transform: translate(-50%, -50%) rotate(10deg); 
   transform-origin: top left;
-  z-index: 1; 
+  z-index: 2; 
   transition: transform 0.5s ease;
 }
+.Austin {
+  position: absolute;
+  top: 70%;   
+  left: 100%;  
+  transform: translate(-50%, -50%) rotate(20deg); 
+  transform-origin: top left;
+  z-index: 3; 
+  transition: transform 0.5s ease;
+}
+.sandiego{
+    position: absolute;
+    top: 80%;
+    left: 125%;
+    transform: translate(-50%, -50%) rotate(30deg); 
+  transform-origin: top left;
+  z-index: 4; 
+  transition: transform 0.5s ease;
+}
+.london{
+    position: absolute;
+    top: 90%;
+    left: 150%;
+    transform: translate(-50%, -50%) rotate(40deg); 
+  transform-origin: top left;
+  z-index: 5; 
+  transition: transform 0.5s ease;
+}
+.leeds{
+     position: absolute;
+    top: 100%;
+    left: 175%;
+    transform: translate(-50%, -50%) rotate(50deg); 
+  transform-origin: top left;
+  z-index: 6; 
+  transition: transform 0.5s ease;
+}
+.nottingham{
+    position: absolute;
+    top: 110%;
+    left: 200%;
+    transform: translate(-50%, -50%) rotate(60deg); 
+  transform-origin: top left;
+  z-index: 7; 
+  transition: transform 0.5s ease;
+}
+
 
 
 
