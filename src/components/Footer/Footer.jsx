@@ -1,8 +1,26 @@
 import React from 'react'
 import '../../components/Footer/Footer.css';
 import metriclogo from  '../../images/metric-logo.png'
+import { useEffect } from 'react';
 
 export default function Footer() {
+    useEffect(() => {
+  const logo = document.querySelector(".footer-metric-logo");
+
+  const onScroll = () => {
+    const rect = logo.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100) {
+      logo.classList.add("show-logo");
+      logo.classList.remove("hidden-logo");
+    }
+  };
+
+  window.addEventListener("scroll", onScroll);
+
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
+
   return (
     <div className='footer'>
         <div className='footer-section1'>
@@ -109,7 +127,7 @@ export default function Footer() {
             </div>
 
             <div className='2nd-part'>
-                <div className='footer-metric-logo'>
+                <div className='footer-metric-logo hidden-logo'>
                     <img src={metriclogo}  />
                 </div>
             </div>
