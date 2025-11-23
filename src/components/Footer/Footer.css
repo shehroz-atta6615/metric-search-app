@@ -1,0 +1,38 @@
+    .arrow-svg1:hover .button-path {
+      fill: url(#animatedGradient);
+    }
+
+    .arrow-svg{
+        display: flex;
+    }
+    .arrow-svg .list1 .no-bullets{
+        list-style: none;
+    }
+    .list1{
+        margin-left: 20px;
+        color: white;
+    }
+    .arrow-svg2 .list2 .no-bullets2{
+        list-style: none;
+    }
+    .list2{
+        color: white;
+    }
+    .arrow-svg-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 200px;
+    }
+    .arrow-svg{
+        margin-left: 65px;
+    }
+    .arrow-svg2{
+        margin-right: 65px;
+    }
+   .footer-metric-logo img{
+    width: 95%;
+    height: 290px;
+   }
+   
+     
