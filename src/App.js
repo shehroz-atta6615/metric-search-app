@@ -7,10 +7,12 @@ import AboutUs from "./components/About-us/AboutUs.jsx";
 import GlobalReach from "./components/Global-reach/GlobalReach.jsx";
 import TalentedIndividuals from "./components/TalentedIndividuals/TalentedIndividuals.jsx";
 import Footer from './components/Footer/Footer.jsx'
+import CustomCursor from "./components/CustomCursor/CustomCursor.jsx";
 
 function App() {
   return (
     <div>
+      <CustomCursor />
       <div className="App">
         <Navbar />
         <HeroSection />

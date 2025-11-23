@@ -1,0 +1,49 @@
+/* hide native cursor */
+body {
+  cursor: none;
+}
+
+/* outer square */
+.custom-cursor {
+  position: fixed;
+  width: 34px;
+  height: 34px;
+  border: 2px solid #ffffff;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px; /* make 0 for sharp corners */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+/* inner small square */
+.inner-dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 2px; /* make 0 for sharp */
+}
+
+/* hover enlarge effect on buttons / links */
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.2);
+  border-color: #00ffaa;
+  background: rgba(0, 255, 170, 0.15);
+}
+
+/* hide on mobile */
+@media (hover: none) {
+  body {
+    cursor: auto;
+  }
+  .custom-cursor {
+    display: none;
+  }
+}
