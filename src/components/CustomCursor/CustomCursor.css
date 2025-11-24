@@ -8,9 +8,9 @@ body {
   position: fixed;
   width: 34px;
   height: 34px;
-  border: 2px solid #ffffff;
+  border: 2px solid #d1d1d1; /* light grey border */
   background: rgba(0, 0, 0, 0.15);
-  border-radius: 4px; /* make 0 for sharp corners */
+  border-radius: 6px; /* increased rounded corners */
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
@@ -24,10 +24,10 @@ body {
 
 /* inner small square */
 .inner-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;        /* smaller */
+  height: 6px;       /* smaller */
   background: #ffffff;
-  border-radius: 2px; /* make 0 for sharp */
+  border-radius: 2px;
 }
 
 /* hover enlarge effect on buttons / links */

@@ -8,10 +8,12 @@ import GlobalReach from "./components/Global-reach/GlobalReach.jsx";
 import TalentedIndividuals from "./components/TalentedIndividuals/TalentedIndividuals.jsx";
 import Footer from './components/Footer/Footer.jsx'
 import CustomCursor from "./components/CustomCursor/CustomCursor.jsx";
+import PageLoader from "./components/Loader/PageLoader.jsx";
 
 function App() {
   return (
     <div>
+      <PageLoader />
       <CustomCursor />
       <div className="App">
         <Navbar />
