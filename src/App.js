@@ -25,9 +25,7 @@ function App() {
       <div className="About-us">
           <AboutUs />
       </div>
-      <div className="our-global-reach">
           <GlobalReach />
-      </div>
       <div className="thrive-talented-individuals">
           <TalentedIndividuals />
       </div>

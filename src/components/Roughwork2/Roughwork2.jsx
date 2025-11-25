@@ -16,55 +16,60 @@ export default function GlobalReach() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
+  const section = sectionRef.current;
+  if (!section) return;
 
-    const cards = gsap.utils.toArray(
-      section.querySelectorAll(".images-animation svg")
-    );
-    if (!cards.length) return;
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",   // section full screen pe aate hi
-        end: "+=800",       // jitna scroll animation ke liye chahiye
-        scrub: 1,
-        pin: true,          // 👉 yahi wrapper ab pin hoga
-        // pinSpacing: true, // default hi true hota hai
-        // markers: true,
-      },
-    });
-
-   cards.forEach((card, i) => {
-  const total = cards.length;
-  const t = i / (total - 1); // 0 → last index = 1
-
-  // subtle offsets
-  const offsetX = t * 60;   // max ~60px right
-  const offsetY = t * 30;   // max ~30px down
-  const offsetRot = t * 4;  // extra 0–4° rotation
-
-  tl.to(
-    card,
-    {
-      top: offsetY,               // 0 → 30
-      left: -450 + offsetX,       // -450 → -390
-      xPercent: 0,
-      yPercent: 0,
-      rotation: -10 + offsetRot,  // -10 → -6
-      ease: "none",
-    },
-    0
+  const cards = gsap.utils.toArray(
+    section.querySelectorAll(".images-animation svg")
   );
-});
+  if (!cards.length) return;
 
+  // Timeline + pin (section full screen pe aa kar freeze)
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top top",   // section poora viewport fill kare
+      end: "+=800",       // jitni scroll space animation ke liye chahiye
+      scrub: 1,
+      pin: true,
+      // markers: true,   // test ke liye on kar sakte ho
+    },
+  });
 
-    return () => {
-      tl.scrollTrigger && tl.scrollTrigger.kill();
-      tl.kill();
-    };
-  }, []);
+  // 👉 yahan se final layout define ho raha hai
+  cards.forEach((card, i) => {
+    // final row ka base point
+    const baseTop = 40;    // pehle card ki vertical position (px)
+    const gapY    = 18;    // har agla card thoda sa neeche
+
+    const baseLeft = -300; // pehle card kitna left shift ho
+    const gapX     = 320;  // cards ke beech ka gap (370 width → halki overlap)
+
+    const endTop = baseTop + i * gapY;     // 40, 58, 76, ...
+    const endLeft = baseLeft + i * gapX;   // -300, 20, 340, 660, ...
+
+    const endRot = -14 + i * 4;            // -14°, -10°, -6°, ...
+
+    tl.to(
+      card,
+      {
+        top: endTop,        // px, GSAP auto px le leta
+        left: endLeft,
+        xPercent: 0,
+        yPercent: 0,
+        rotation: endRot,
+        ease: "none",
+      },
+      0 // sab cards ek sath animate hon (deck jaisa feel)
+    );
+  });
+
+  return () => {
+    tl.scrollTrigger && tl.scrollTrigger.kill();
+    tl.kill();
+  };
+}, []);
+
 
 
 

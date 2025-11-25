@@ -24,6 +24,7 @@ export default function HeroSection() {
         </div>
         <div className='BoldText'>
             <h1 className='BoldText1'>High Achieving</h1>
+           
             <h1 className='BoldText2'>Global Partnerships</h1>
         </div>
 

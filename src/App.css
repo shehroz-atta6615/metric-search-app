@@ -27,11 +27,11 @@
 .our-global-reach {
   height: 100vh;
   background: black;
-   /* display: flex;          
-  align-items: flex-start; */
-  position: relative; 
-  overflow: hidden; 
+  position: relative;
+  overflow: hidden;
   width: 100%;
+  z-index: 1; 
+
 }
 .thrive-talented-individuals{
   height: 170vh;

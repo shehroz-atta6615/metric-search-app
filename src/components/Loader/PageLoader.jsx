@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from '../../images/metric-org-logo.png'; // <-- YOUR LOGO
+import logo from '../../images/metric-org-logo.png'; 
 import '../../components/Loader/PageLoader.css'
 
 export default function PageLoader() {
