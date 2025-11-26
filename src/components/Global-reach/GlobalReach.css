@@ -4,8 +4,13 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-
 }
+
+.GlobalReach {
+  height: 100%;
+  position: relative;
+}
+
 .GlobalReach-heading h2 {
   font-weight: 700;
   line-height: 1.1;
@@ -26,33 +31,21 @@
   margin-left: 130px;
 }
 
-/* .GlobalReach {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-} */
- .GlobalReach {
-  height: 100%;
-  position: relative;
-}
-
 .images-animation {
   position: absolute;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-   z-index: 2;
 }
 
-/* IMPORTANT: yeh tumhari original positions waapas daal do */
+/* 👉 yeh tumhara original diagonal layout hai */
 
 .NewYork {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(0deg); /* 👈 yahan 0deg */
   z-index: 1;
-  margin: 20px 0;
 }
 
 .Fort-Lauderdale {
@@ -60,7 +53,6 @@
   top: 60%;
   left: 75%;
   transform: translate(-50%, -50%) rotate(10deg);
-  transform-origin: top left;
   z-index: 2;
 }
 
@@ -69,7 +61,6 @@
   top: 70%;
   left: 100%;
   transform: translate(-50%, -50%) rotate(20deg);
-  transform-origin: top left;
   z-index: 3;
 }
 
@@ -78,7 +69,6 @@
   top: 80%;
   left: 125%;
   transform: translate(-50%, -50%) rotate(30deg);
-  transform-origin: top left;
   z-index: 4;
 }
 
@@ -87,7 +77,6 @@
   top: 90%;
   left: 150%;
   transform: translate(-50%, -50%) rotate(40deg);
-  transform-origin: top left;
   z-index: 5;
 }
 
@@ -96,7 +85,6 @@
   top: 100%;
   left: 175%;
   transform: translate(-50%, -50%) rotate(50deg);
-  transform-origin: top left;
   z-index: 6;
 }
 
@@ -105,10 +93,5 @@
   top: 110%;
   left: 200%;
   transform: translate(-50%, -50%) rotate(60deg);
-  transform-origin: top left;
   z-index: 7;
 }
-
-/* YEH WALA PURA RULE DELETE KAR DO:
-.images-animation.scroll-animate svg { ... }
-*/
