@@ -1,59 +1,60 @@
-
-
-.container1{
+/* WRAPPER – fixed navbar ki height reserve karega */
+.container1 {
   height: 100px;
   background: transparent;
 }
 
-
-img{
-    margin-left: 50px;
-    margin-top: 50px;
-    width: 150px;
-    height: 40px;
-}
-
-
+/* FIXED NAVBAR */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100px;
+
   display: flex;
   justify-content: space-between;
-  align-items: center;     /* Add this for vertical alignment */
-  position: fixed;         
-  top: 0;                  
-  left: 0;
-  width: 100%;             
-  z-index: 999;            
-  padding: 0 10px;         /* Replace margin-right in buttons */
+  align-items: center;
+
+  padding: 0 48px;
+  z-index: 999;
 }
 
-/* navbar  */
+/* LOGO */
+.metric-logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
 
-
+/* RIGHT SIDE BUTTONS */
 .button-container {
   display: flex;
   gap: 12px;
   align-items: center;
-  margin-top: 30px;
-  margin-right: 60px;
 }
+
+/* COMMON BUTTON STYLE */
 .btn {
   display: flex;
   align-items: center;
   gap: 13px;
+
   background: rgba(255, 255, 255, 0.3);
   color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
+
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
-   overflow: hidden;  
+  overflow: hidden;
 }
 
+/* CORNER TRIANGLE BASE */
 .btn::after {
   content: "";
   position: absolute;
@@ -61,29 +62,109 @@ img{
   bottom: 0;
   border-top: 12px solid transparent;
 }
-.linkedin::after{
-    border-right: 12px solid rgba(0, 0, 0, 0.9);
+
+/* LinkedIn – right corner triangle */
+.linkedin::after {
+  border-right: 12px solid rgba(0, 0, 0, 0.9);
 }
 
+/* MENU – left corner triangle (desktop) */
 .menu::after {
   border-left: 12px solid rgba(0, 0, 0, 0.9);
   left: 0;
   right: auto;
 }
+
 .icon {
   font-size: 25px;
 }
-span{
-    font-size: 13px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/* sirf menu ke text ke liye */
+.menu-text {
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .btn:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* LinkedIn chhota pill */
 .linkedin {
   width: 45px;
   justify-content: center;
 }
-.menu-text{
-    font-size: 15px;
+
+/* Tablet / small laptop tuning */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 0 24px;
+    height: 90px;
+  }
+
+  .container1 {
+    height: 90px;
+  }
+
+  .metric-logo img {
+    width: 135px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+}
+
+/* ✅ 700px se neeche – MENU = LinkedIn jaisa, text gayab, sab chhota */
+@media screen and (max-width: 700px) {
+  .navbar {
+    padding: 0 16px;
+    height: 80px;
+  }
+
+  .container1 {
+    height: 80px;
+  }
+
+  .metric-logo img {
+    width: 120px;
+  }
+
+  .button-container {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  /* dono chhote pills, center icon-only */
+  .linkedin,
+  .menu {
+    width: 40px;
+    justify-content: center;
+  }
+
+  /* MENU ka text hide – sirf grid icon bache */
+  .menu-text {
+    display: none;
+  }
+
+  /* MENU ka corner bhi LinkedIn jaisa right side pe */
+   .menu::after {
+    border-right: 0;
+    right: auto;
+    border-left: 12px solid rgba(0, 0, 0, 0.9);
+    left: 0;
+  }
 }

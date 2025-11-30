@@ -1,163 +1,320 @@
-.header-text{
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 14px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-letter-spacing: 5px;
-font-weight: 600;
-}
-.BoldText{
-    margin-top: 20px;
-    font-size: 65px;
-    color: white;
-    position: relative;
-    z-index: 3;
-    
-}
-.BoldText1{
-    margin-left: 90px;
-}
-.BoldText2{
-    margin-left: 200px;
-    position: relative;
-    margin-top: -30px;
-}
-/* .video-section{
-    width: 235px;
-    height: 140px;
-    background: transparent;
-    border: 2px solid #ffffff;
-    
-    margin-left: 220px;
-    margin-top: -60px;
-    clip-path: polygon(
-        0% 0%,        
-        100% 0%,     
-        100% 78%,     
-        88% 100%,     
-        0% 100%       
-    );
-} */
-
-/* .video-section {
-  width: 250px;
-  height: 150px;
-  position: absolute;
-  margin-left: 220px;
-    margin-top: -65px;
-    z-index: 1;
-    
-}
-
-
-.outline {
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
-
-.video-section {
+/* basic defaults – sab screens par */
+.container2 {
   position: relative;
-  width: 250px;
-  height: 150px;
-  cursor: pointer;
-  margin-left: 220px;
-  margin-top: -65px;
-  overflow: hidden;
+  color: #ffffff;
 }
 
-/* Video */
-.video-section .video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: 0.5s ease;
-  /* pointer-events: none; */
-  clip-path: polygon(
-    10px 10px,
-    235px 10px,
-    235px 110px,
-    210px 140px,
-    10px 140px
-  );
-  z-index: 1;
+/* ===== DESKTOP LAYOUT (tumhara original design) ===== */
+@media (min-width: 1150px) {
+  /* hero wrapper – sits under fixed navbar */
+  .container2 {
+    padding-top: 5px;          /* tumhara exact value */
+    padding-left: 80px;
+    padding-right: 80px;
+    min-height: calc(120vh - 100px);
+  }
+
+  .hero-inner {
+    width: 100%;
+    max-width: 1350px;
+  }
+  
+
+  /* top line text */
+  .header-text {
+    text-align: center;
+    font-size: 13px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 6px;
+    font-weight: 600;
+  }
+
+  /* main row */
+  .hero-main {
+    margin-top: 30px;
+    position: relative;
+  }
+
+  /* big heading */
+  .BoldText {
+    margin-top: 10px;
+    z-index: 3;
+  }
+
+  .BoldText1,
+  .BoldText2 {
+    margin: 0;
+    font-size: 130px;
+    line-height: 1.05;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 3;
+  }
+
+  .BoldText1 {
+    margin-left: 10px;
+  }
+
+  .BoldText2 {
+    margin-left: 110px;
+    margin-top: 10px;
+    z-index: 3;
+  }
+
+  /* METRIC EXEC box */
+  .video-section {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+    margin-left: 140px;
+    margin-top: -50px;
+    overflow: hidden;
+  }
+
+  .video-section .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s ease;
+    clip-path: polygon(
+      10px 10px,
+      235px 10px,
+      235px 110px,
+      210px 140px,
+      10px 140px
+    );
+  }
+
+  .video-section:hover .video {
+    opacity: 1;
+  }
+
+  .video-section svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .dot-square {
+    fill: white;
+    transition: opacity 0.3s ease;
+  }
+
+  .arrow {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateX(-8px);
+  }
+
+  .video-section:hover .dot-square {
+    opacity: 0;
+  }
+
+  .video-section:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .video-section svg text {
+    pointer-events: none;
+  }
+
+  .video-section:hover .outline .svgOutline {
+    stroke-width: 0;
+  }
+
+  .video {
+    pointer-events: auto;
+  }
+
+  /* right column text */
+  .description {
+    position: absolute;
+    flex: 0 0 32%;
+    max-width: 420px;
+    font-size: 16px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin-top: -30px;
+    right: 100px;
+  }
+
+  .paragraph1,
+  .paragraph2 {
+    margin: 0;
+  }
+  .svgOutline-desktop {
+    display: block;
+  }
+   .svgOutline-small {
+    display: none;
+  }
 }
 
-/* ON HOVER SHOW VIDEO */
-.video-section:hover .video {
-  opacity: 1;
-}
-
-/* SVG overlay */
-.video-section svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-}
-
-/* Dot */
-.dot-square {
-  fill: white;
-  transition: opacity 0.3s ease;
-}
-
-/* Arrow inside SVG */
-.arrow {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  transform: translateX(-8px); /* start slightly left */
-}
-
-/* Hover */
-.video-section:hover .video {
-  opacity: 1;
-}
-
-.video-section:hover .dot-square {
-  opacity: 0;
-}
-
-.video-section:hover .arrow {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 
-.video-section svg text {
-  pointer-events: none;
+/* ============= 1150px se chhota – screenshot jaisa version ============= */
+@media (max-width: 1149px) {
+  .container2 {
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: calc(120vh - 100px);
+  }
+
+  .hero-inner {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  /* line under navbar – same, just a bit tighter */
+  .header-text {
+    text-align: center;
+    font-size: 12px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  /* 2-column layout: left = heading + box, right = text */
+  .hero-main {
+    margin-top: 30px;
+  }
+
+  .hero-left {
+    position: relative;
+  }
+
+  /* big heading – slightly smaller than desktop */
+  .BoldText {
+    margin-top: 10px;
+  }
+
+  .BoldText1,
+  .BoldText2 {
+    margin: 0;
+    font-size: 100px;
+    line-height: 1.03;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .BoldText1 {
+    margin-left: 0;
+  }
+
+  .BoldText2 {
+    margin-left: 90px;   /* “Global Partnerships” ko halka sa right shift */
+    margin-top: 10px;
+  }
+  .svgOutline-desktop {
+    display: none;
+  }
+   .svgOutline-small {
+    display: block;
+  }
+
+  /* METRIC EXEC box – under “Global” but slightly closer */
+  .video-section {
+    position: relative;
+    width: 230px;
+    height: 140px;
+    cursor: pointer;
+    margin-left: 90px;
+    margin-top: -40px;
+    overflow: hidden;
+  }
+
+  .video-section .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s ease;
+    clip-path: polygon(
+      10px 10px,
+      215px 10px,
+      215px 100px,
+      190px 130px,
+      10px 130px
+    );
+  }
+
+  .video-section:hover .video {
+    opacity: 1;
+  }
+
+  .video-section svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .dot-square {
+    fill: white;
+    transition: opacity 0.3s ease;
+  }
+
+  .arrow {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateX(-8px);
+  }
+
+  .video-section:hover .dot-square {
+    opacity: 0;
+  }
+
+  .video-section:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .video-section svg text {
+    pointer-events: none;
+  }
+
+  .video-section:hover .outline .svgOutline {
+    stroke-width: 0;
+  }
+
+  .video {
+    pointer-events: auto;
+  }
+
+  /* right description – flex column on the right */
+  .description {
+    position: absolute;  
+    right: 100px;
+
+    max-width: 380px;
+    font-size: 14px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin-top: -30px;           /* heading se thoda neeche */
+  }
+
+  .paragraph1,
+  .paragraph2 {
+    margin: 0;
+  }
 }
 
-.video-section:hover .outline .svgOutline {
-  stroke-width: 0;
-}
-
-.video {
-  pointer-events: auto; /* allow video to play */
-}
 
 
-/* description  */
 
-.description{
-    width: 400px;
-    height: 250px;
-    color: #FFFFFF;
-    margin-left: 900px;
-    margin-top: -32px;
-    font-size: 17px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.paragraph1{
-    line-height: 30px;
-}
-.paragraph2{
-    line-height: 30px;
-}
- 
+
+
+
+
+
